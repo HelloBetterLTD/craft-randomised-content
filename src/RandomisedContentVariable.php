@@ -5,7 +5,7 @@
  * Time: 10:25 AM
  */
 
-namespace silverstripers\randomisecontent;
+namespace silverstripers\randomisedcontent;
 
 use craft\elements\Entry;
 use craft\fields\Matrix;

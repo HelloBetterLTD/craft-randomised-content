@@ -5,7 +5,7 @@
  * Time: 10:43 AM
  */
 
-namespace silverstripers\randomisecontent;
+namespace silverstripers\randomisedcontent;
 
 use craft\web\twig\variables\CraftVariable;
 use yii\base\Event;
