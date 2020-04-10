@@ -19,7 +19,7 @@ class RandomisedContentVariable
         $blocksQuery = $entry->getFieldValue($fieldName);
         $blocks = $blocksQuery->getIterator();
         $count = $blocks->count();
-        if ($count > 0) {
+        if ($count == 1) {
             $month = date('n');
             $currentItem = $month % $count;
 

@@ -8,7 +8,7 @@ Craft module to randomised contents for Matrix type blocks
 
 ## 2. update configs
 
-Please merge below array into your projects `config/app.php`
+Please merge below array into your project's `config/app.php`
 
 ```
 return [
@@ -18,3 +18,6 @@ return [
     'bootstrap' => ['randomise-content'],
 ];
 ```
+## 3. use in template
+
+`craft.randomisedContent.RandomisedMatrixBlock(entry, $matrix_field_handle)`
