@@ -4,7 +4,7 @@ Craft module to randomised contents for Matrix type blocks
 # Installations
 
 ## 1. install with composer
-`composer require SilverStripers/craft-randomised-content`
+`composer require silverstripers/craft-randomised-content`
 
 ## 2. update configs
 
@@ -20,4 +20,4 @@ return [
 ```
 ## 3. use in template
 
-`craft.randomisedContent.RandomisedMatrixBlock(entry, $matrix_field_handle)`
+`{% set block = craft.randomisedContent.RandomisedMatrixBlock(entry, $matrix_field_handle) %}`
