@@ -13,12 +13,12 @@ use craft\fields\Matrix;
 class RandomisedContentVariable
 {
 
-    public function getRandomisedContentBlock(Entry $entry, $fieldName)
+    public function getRandomisedMatrixBlock(Entry $entry, $fieldName)
     {
-        echo 'test';die();
-        /* @var $content Matrix */
-        $content = $entry->getFieldValue($fieldName);
-        $count = $content->getIterator()->count();
+        /* @var $blocksQuery Matrix */
+        $blocksQuery = $entry->getFieldValue($fieldName);
+        $blocks = $blocksQuery->getIterator();
+        $count = $blocks->count();
         if ($count > 0) {
             $month = date('n');
             $currentItem = $month % $count;
@@ -28,8 +28,13 @@ class RandomisedContentVariable
             } else {
                 $currentItem = $currentItem - 1;
             }
-//			echo '<pre>'.print_r( $content->getIterator()->offsetGet($currentItem), 2);die();
-            return $content->getIterator()->offsetGet($currentItem);
+            return $blocks->offsetGet($currentItem);
+        } elseif ($count > 1) {
+            trigger_error(
+                'You can randomise matrix field with only one block type. '
+                . $fieldName. ' has ' . $count . ' block types',
+                E_USER_ERROR
+            );
         }
     }
 

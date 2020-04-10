@@ -9,8 +9,9 @@ namespace silverstripers\randomisedcontent;
 
 use craft\web\twig\variables\CraftVariable;
 use yii\base\Event;
+use yii\base\Module;
 
-class Randomise extends \yii\base\Module
+class RandomiseModule extends Module
 {
     public $id = 'randomise-content';
 
