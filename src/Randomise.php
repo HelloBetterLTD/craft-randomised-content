@@ -1,0 +1,38 @@
+<?php
+/**
+ * Created by priyashantha@silverstripers.com
+ * Date: 4/10/20
+ * Time: 10:43 AM
+ */
+
+namespace silverstripers\randomisecontent;
+
+use craft\web\twig\variables\CraftVariable;
+use yii\base\Event;
+
+class Randomise extends \yii\base\Module
+{
+    public $id = 'randomise-content';
+
+    public $_settingsModel = null;
+
+    /**
+     * Initializes the module.
+     */
+    public function init()
+    {
+        parent::init();
+
+        Event::on(
+            CraftVariable::class,
+            CraftVariable::EVENT_INIT,
+            function (Event $event) {
+                /** @var CraftVariable $variable */
+                $variable = $event->sender;
+                $variable->set('randomisedContent', RandomisedContentVariable::class);
+            }
+        );
+
+    }
+
+}

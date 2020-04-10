@@ -1,0 +1,20 @@
+{
+  "name": "fabricians/randomised-content",
+  "description": "Craft module to randomised contents for Matrix type blocks",
+  "keywords": ["craftcms", "matrix", "module"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Priyashantha HP",
+      "email": "priyashantha@silverstripers.com"
+    }],
+
+  "require": {
+    "craftcms/cms": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "silverstripers\\randomisecontent\\": "src/"
+    }
+  }
+}
