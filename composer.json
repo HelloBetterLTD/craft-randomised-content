@@ -1,8 +1,12 @@
 {
-  "name": "fabricians/randomised-content",
+  "name": "SilverStripers/craft-randomised-content",
   "description": "Craft module to randomised contents for Matrix type blocks",
   "keywords": ["craftcms", "matrix", "module"],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SilverStripers/craft-randomised-content.git"
+  },
   "authors": [
     {
       "name": "Priyashantha HP",
