@@ -1,6 +1,5 @@
 {
   "name": "SilverStripers/craft-randomised-content",
-  "type": "craft-plugin",
   "description": "Craft module to randomised contents for Matrix type blocks",
   "keywords": ["craftcms", "matrix", "module"],
   "license": "MIT",

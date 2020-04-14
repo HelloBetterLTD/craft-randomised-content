@@ -8,7 +8,9 @@
 namespace silverstripers\randomisedcontent;
 
 use craft\elements\Entry;
+use craft\elements\MatrixBlock;
 use craft\fields\Matrix;
+use craft\records\MatrixBlockType;
 
 class RandomisedContentVariable
 {
@@ -19,7 +21,7 @@ class RandomisedContentVariable
         $blocksQuery = $entry->getFieldValue($fieldName);
         $blocks = $blocksQuery->getIterator();
         $count = $blocks->count();
-        if ($count == 1) {
+        if ($count > 0) {
             $month = date('n');
             $currentItem = $month % $count;
 
